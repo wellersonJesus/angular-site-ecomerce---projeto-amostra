@@ -10,32 +10,5 @@ import { ProductAlertsComponent } from "./product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from "./product-details/product-details.component";
 import { CartService } from "./cart.service";
 import { CartComponent } from "./cart/cart.component";
+import { HttpClientModule } from "@angular/common/http";
 
-@NgModule({
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: "", component: ProductListComponent },
-      { path: "products/:productId", component: ProductDetailsComponent },
-      { path: "cart", component: CartComponent }
-    ])
-  ],
-  declarations: [
-    AppComponent,
-    TopBarComponent,
-    ProductListComponent,
-    ProductAlertsComponent,
-    ProductDetailsComponent,
-    CartComponent
-  ],
-  bootstrap: [AppComponent],
-  providers: [CartService]
-})
-export class AppModule {}
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
